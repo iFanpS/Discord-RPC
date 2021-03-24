@@ -12,15 +12,23 @@ Credit Bearski11
 print(banner)
 
 def awalan():
-    id = int(input("Please put your Client ID: "))
-    state1 = input("Put your state rpc: ")
-    details = input("Put your Details rpc: ")
-    limg = input("Put your large img name: ")
-    simg = input("Put your small img name: ")
-    client_id = f'{id}'
-    RPC = Presence(client_id) 
-    RPC.connect() 
-    print(RPC.update(state=f"{state1}", details=f"{details}", large_image=f"{limg}", small_image=f"{simg}", large_text="NAME", start=time.time()))
+    pemilihan = input("Wanna customize the rpc? (y/n)\n==> ")
+    if pemilihan == 'y':
+        id = input("Put your client ID: ")
+        state1 = input("Put your state rpc: ")
+        details = input("Put your detail information rpc: ")
+        limg = input("Large image name/number: ")
+        simg = input("Small image name/number: ")
+        client_id = id
+        RPC = Presence(client_id) 
+        RPC.connect() 
+        print(RPC.update(state=f"{state1}", details=f"{details}", large_image=f"{limg}", small_image=f"{simg}", large_text="NAME", start=time.time()))
+    if pemilihan == 'n':
+        id1 = input("Put your client ID: ")
+        client_id = id1
+        RPC = Presence(client_id) 
+        RPC.connect() 
+        print(RPC.update(state=f"GOOD RPC :D", details=f"iFanpS RPC", large_image=f"no", small_image=f"no", large_text="NAME", start=time.time()))
 
 def update():
     upt = input("Want to update the text? (y/n)")
