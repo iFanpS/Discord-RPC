@@ -24,8 +24,8 @@ def awalan():
             simgs = str(j['smallimg'])
         RPC = Presence(id)
         RPC.connect()
-        RPC.update(state=states, details=detailss, large_image=limgs, small_image=simgs, start=time.time())
-        print('Your DiscordRichPresence is working now!')
+        print(RPC.update(state=states, details=detailss, large_image=limgs, small_image=simgs, start=time.time()))
+        input("")
     except FileNotFoundError:
         print('Please make rpcsave.json first!')
 
