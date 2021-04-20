@@ -1,7 +1,12 @@
 # Usage
 [+] Type python/python3 rpc.py
 
-[=] DONE! Thx for using my Code
+[+] Put your information for rpc in rpcsave.json
+
+[+] DONE! Thx for using my Code
 
 # Credit
-[+] BEARSKI11 Thx a lot
+[+] BEARSKI11
+
+#Issues
+[+] DM iFanpS#7745 if u have problem
